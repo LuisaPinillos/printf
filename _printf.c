@@ -23,11 +23,12 @@ int _printf(const char *format, ...)
 				f = get_op_func(++format);
 				if (f != NULL)
 				{
-					f(args);
+					count_format += f(args);
 				}
 				else
 				{
 					write(1, format - 1, 2);
+					count_format += 2;
 				}
 				format++;
 			}

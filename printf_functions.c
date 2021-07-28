@@ -52,9 +52,6 @@ int op_string(va_list args)
 int op_porcentage(va_list args)
 {
 	(void)args;
-	if ()
-	{
-	}
 
 	write(1, "%", 1);
 	return (1);
