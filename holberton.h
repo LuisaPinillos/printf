@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <unistd.h>
 
 /*STRUCTURE*/
 /**
@@ -21,6 +22,7 @@ typedef struct op
 
 /*PROTOTYPES*/
 int _printf(const char *format, ...);
+int (*get_op_func(const char *s))(va_list args);
 int op_character(va_list args);
 int op_string(va_list args);
 int op_porcentage(va_list args);
