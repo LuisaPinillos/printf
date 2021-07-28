@@ -1,17 +1,17 @@
 #include "holberton.h"
 
 /**
- * _printf -
- * @format:
- * Return:
+ * _printf - Main function of printf.
+ * @format: Is a character string.
+ * Return: What the container keeps.
  */
 
 int _printf(const char *format, ...)
 {
 	int count_format = 0;
 	va_list args;
-	va_start(args, format);
 
+	va_start(args, format);
 	if (format != NULL && *format != '\0')
 	{
 		while (*format != '\0')

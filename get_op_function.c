@@ -1,11 +1,10 @@
 #include "holberton.h"
 
 /**
- * op_character - compare the conversion specification with
- * corresponding function
- * @args: arguments
- * @char: the specification conversion
- * Return: the specifier
+ * get_op_func - compare the conversion specification with
+ * corresponding function.
+ * @s: the specification conversion.
+ * Return: the specifier.
  */
 
 int (*get_op_func(const char *s))(va_list args)
