@@ -1,13 +1,12 @@
 #include "holberton.h"
-
 /**
  * _printf - Main function of printf.
  * @format: Is a character string.
  * Return: What the container keeps.
  */
-
 int _printf(const char *format, ...)
 {
+	int (*f)(va_list args);
 	int count_format = 0;
 	va_list args;
 
@@ -18,17 +17,35 @@ int _printf(const char *format, ...)
 		{
 			if (*format == '%')
 			{
-				int (*f)(va_list args);
+				int acumulator;
 
-				f = get_op_func(++format);
+				acumulator = spaces(++format);
+				if (acumulator != 0)
+				{
+					format += acumulator;
+					f = get_op_func(format);
+				}
+				else
+				{
+					f = get_op_func(++format);
+				}
 				if (f != NULL)
 				{
 					count_format += f(args);
 				}
 				else
 				{
-					write(1, format - 1, 2);
-					count_format += 2;
+					if (acumulator != 0)
+					{
+						write(1, format - (acumulator + 1), 1);
+						write(1, " ", 1);
+						write(1, format, 1);
+					}
+					else
+					{
+						write(1, format - 1, 2);
+						count_format += 2;
+					}
 				}
 				format++;
 			}
