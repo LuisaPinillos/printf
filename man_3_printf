@@ -1,17 +1,156 @@
-.\" Manpage for nuseradd.
-.\" Contact vivek@nixcraft.net.in to correct errors or typos.
-.TH man 8 "06 May 2010" "1.0" "nuseradd man page"
+.\" Manpage for _printf.
+.\" Contact luisapinillos20@gmail.com to correct errors or typos.
+.TH man 3 "29 Jul 2021" "1.0" "_printf man page"
+
 .SH NAME
-nuseradd \- create a new LDAP user 
+_printf \- Produce an output according to the format of the argument
+
 .SH SYNOPSIS
-nuseradd [USERNAME]
+.B #include "holberton.h"
+
+int _printf(const char *format, ...)
+
 .SH DESCRIPTION
-nuseradd is high level shell program for adding users to LDAP server.  On Debian, administrators should usually use nuseradd.debian(8) instead.
+This function allows to carry to the standard output (the screen) the values (data) obtained from the evaluation of a list of arguments. The syntax to call the function has the control string and the argument list.
+.br 
+In the control chain the specifier of the data output format must be indicated, it can also have ordinary text and the escape sequence. this string of characters must be enclosed in double quotes.
+.PP
+.B Format of the format string
+.br
+the characters are copied verbatim into the function's output, but the format specifiers, which start with a % character, indicate the location and method of translating data (such as a number) into characters.
+.PP
+Between the % character and the format specifier there may be (in this order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier. This is its structure:
+
+.br
+%[parameter][flags][width][.precision][length]type
+
 .SH OPTIONS
-The nuseradd does not take any options. However, you can supply username.
-.SH SEE ALSO
-useradd(8), passwd(5), nuseradd.debian(8) 
-.SH BUGS
-No known bugs.
-.SH AUTHOR
-Vivek Gite (vivek@nixcraft.net.in)
+
+.B - FLAG CHARACTERS
+.br
+The character% is followed by zero or more of the following flags:
+
+.B  0 
+.br
+It is padded with leading zeros to a given value. For example, “% 03d” prints a zero-justified number up to three digits.
+
+.B +
+.br
+Print the sign of a number
+
+.B -
+.br
+The field is justified to the left since by default it is justified to the right
+
+.B #
+.br
+Alternative format. For reals, zeros are left at the end and the comma is always printed. For numbers that are not in base 10, a prefix denoting the base is added.
+
+.B - WIDTH
+.br
+Size of the width of the field where the value will be printed.
+
+.B *
+.br
+The number to use is passed as a parameter just before the value. For example printf ("% * d", 5, 10) prints the number 10, but with a width of five digits (that is, it will fill with 3 blanks to the left).
+
+.B - PRECISION
+.br
+Size of the decimal part for real numbers. Number of characters to print for text strings.
+
+.B *
+.br
+The number to use is passed as a parameter just before the value. For example printf ("%. * S", 3, "123456") prints "123".
+
+.B - LENGHT
+.br
+.B hh
+.br
+Convert variable of type char to integer and print.
+
+.B h
+.br
+Convert variable from short type to integer and print.
+
+.B l
+.br
+For integers, a variable of type long is expected.
+
+.B ll
+.br 
+For integers, a variable of type long long is expected.
+
+.B  L
+.br 
+For reals, a variable of type long double is expected.
+
+.B z
+.br 
+For integers, an argument of type size_t is expected.
+
+.B - CONVERSION SPECIFIERS
+.br
+.B %c
+.br 
+If there is no l modifier present, the int argument is converted to an unsigned character and the resulting character is written.
+
+.B %s
+.br 
+If no l modifier is present, the const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte ('\0').
+
+.B %%
+.br 
+Print the % character
+
+.B %d, %i
+.br
+The int argument is converted to signed decimal notation. The precision, if any, gives the minimum number of digits that must appear; if the converted value requires fewer digits, it is padded on the left with zeros.
+
+.B - EXAMPLE  
+.br 
+#include "holberton.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+
+ int main(void)
+
+{
+    char character = 'H';
+    char *name = "Holberton";
+    int year = 2021;
+    char percentage = '%';
+
+    _printf("initial letter: %c\n", character);
+    _printf("The school is: %s\n", name,);
+    _printf("year: %i\n", number,);
+    _printf("sign percentage is: %%\n", percentage,);
+    return (0);
+
+}
+.br
+
+.B - OUTPUT 
+.br 
+In the output the format is replaced by the value of the specified variable, like this:
+
+.br
+initial letter: H
+.br
+The school is: Holberton
+.br
+year: 2021
+.br
+sign percentage is: %
+
+.B - RETURN VALUE 
+.br 
+In a successful case this function returns the number of characters printed (excluding the null byte).
+
+.SH - AUTHORS
+Luisa Fernanda Pinillos Villa (3389@holbertonschool.com)
+.br
+Laura Sofia Caicedo (3383@holbertonschool.com)
