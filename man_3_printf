@@ -106,11 +106,51 @@ Print the % character
 .br
 The int argument is converted to signed decimal notation. The precision, if any, gives the minimum number of digits that must appear; if the converted value requires fewer digits, it is padded on the left with zeros.
 
-.B RETURN VALUE 
+.B - EXAMPLE  
+.br 
+#include "holberton.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+
+ int main(void)
+
+{
+    char character = 'H';
+    char *name = "Holberton";
+    int year = 2021;
+    char percentage = '%';
+
+    _printf("initial letter: %c\n", character);
+    _printf("The school is: %s\n", name,);
+    _printf("year: %i\n", number,);
+    _printf("sign percentage is: %%\n", percentage,);
+    return (0);
+
+}
+.br
+
+.B - OUTPUT 
+.br 
+In the output the format is replaced by the value of the specified variable, like this:
+
+.br
+initial letter: H
+.br
+The school is: Holberton
+.br
+year: 2021
+.br
+sign percentage is: %
+
+.B - RETURN VALUE 
 .br 
 In a successful case this function returns the number of characters printed (excluding the null byte).
 
-.SH AUTHOR
+.SH - AUTHORS
 Luisa Fernanda Pinillos Villa (3389@holbertonschool.com)
 .br
 Laura Sofia Caicedo (3383@holbertonschool.com)
