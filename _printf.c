@@ -20,13 +20,9 @@ int _printf(const char *format, ...)
 			{
 				acumulator = spaces(++format);
 				if (acumulator != 0)
-				{
 					format += acumulator, f = get_op_func(format);
-				}
 				else
-				{
 					f = get_op_func(format);
-				}
 				if (f != NULL)
 					count_format += f(args);
 				else
@@ -35,6 +31,7 @@ int _printf(const char *format, ...)
 					{
 						write(1, format - (acumulator + 1), 1);
 						write(1, " ", 1), write(1, format, 1);
+						count_format += 3;
 					}
 					else
 						write(1, format - 1, 2), count_format += 2;

@@ -22,6 +22,7 @@ typedef struct op
 
 /*PROTOTYPES*/
 int _printf(const char *format, ...);
+int spaces(const char *spc);
 int (*get_op_func(const char *s))(va_list args);
 int op_character(va_list args);
 int op_string(va_list args);
