@@ -55,9 +55,10 @@ if the converted value requires fewer digits, it is padded on the left with zero
 
 - ⏪ <b> INPUT .. </b>
 <prev>
+{
     #include "holberton.h" <br>
     int main(void) <br>
-{
+
     char character = 'H';
     char *name = "Holberton";
     int year = 2021;
@@ -73,12 +74,10 @@ if the converted value requires fewer digits, it is padded on the left with zero
 
 - ⏩ <b> OUTPUT .. </b>
 <prev>
-{
     initial letter: H <br>
     The school is: Holberton <br>
     year: 2021 <br>
     sign percentage is: % <br>
-}
 </prev>
 
 <h2> contributors <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="100px"> </h2>
