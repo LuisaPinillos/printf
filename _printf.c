@@ -12,16 +12,11 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
+
 	if (format != NULL && *format != '\0')
 	{
 		while (*format != '\0')
 		{
-			if ((*format == '%' && (*format++) == ' ') || (*format == '%' && (*format++) == '\0'))
-			{
-				return (-1);
-			}
-			else
-				break;
 			if (*format == '%')
 			{
 				acumulator = spaces(++format);
