@@ -27,5 +27,6 @@ int (*get_op_func(const char *s))(va_list args);
 int op_character(va_list args);
 int op_string(va_list args);
 int op_porcentage(va_list args);
+int op_decimal(va_list args);
 
 #endif

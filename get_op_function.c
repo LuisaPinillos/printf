@@ -13,6 +13,8 @@ int (*get_op_func(const char *s))(va_list args)
 		{"c", op_character},
 		{"s", op_string},
 		{"%", op_porcentage},
+		{"d", op_decimal},
+		{"i", op_decimal},
 		{NULL, NULL}};
 	int iterator = 0;
 
