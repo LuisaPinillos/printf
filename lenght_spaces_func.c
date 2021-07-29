@@ -9,11 +9,11 @@
 
 int spaces(const char *spc)
 {
-    int i = 0;
+	int i = 0;
 
-    while (spc[i] == ' ')
-    {
-        i++;
-    }
-    return (i);
+	while (spc[i] == ' ')
+	{
+		i++;
+	}
+	return (i);
 }
