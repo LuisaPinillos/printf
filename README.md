@@ -42,23 +42,23 @@ if the converted value requires fewer digits, it is padded on the left with zero
 
 - 🤖 <b> How to use them .. </b>
 
-✅ Add the library "holberton.h"
-✅ Create a file "main.c"
-✅ Identify the specifier and functionality for which you will use our function.
-✅ Code it as in the following example.
-✅ To show the output compile it with the following flags
+- ✅ Add the library "holberton.h"
+- ✅ Create a file "main.c"
+- ✅ Identify the specifier and functionality for which you will use our function.
+- ✅ Code it as in the following example.
+- ✅ To show the output compile it with the following flags
 - gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
-✅ Run it with
+- ✅ Run it with
 - ./a.out
 
 <h2> Example <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 32px> </h2>
 
 - ⏪ <b> INPUT .. </b>
 <prev>
-#include "holberton.h"
-
-int main(void)
 {
+    #include "holberton.h"
+    int main(void)
+
     char character = 'H';
     char *name = "Holberton";
     int year = 2021;
@@ -74,14 +74,16 @@ int main(void)
 
 - ⏩ <b> OUTPUT .. </b>
 <prev>
-initial letter: H
-The school is: Holberton
-year: 2021
-sign percentage is: %
+{
+    initial letter: H
+    The school is: Holberton
+    year: 2021
+    sign percentage is: %
+}
 </prev>
 
 <h2> contributors <img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="100px"> </h2>
-Luisa Pinillos <a href = 'https://www.twitter.com/@Luipv_20'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/twitter.svg"/></a>
+Luisa Pinillos <a href = 'https://www.twitter.com/@Luipv_20'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/twitter.svg"/></a> <br>
 Laura Caicedo <a href = 'https://www.twitter.com/@LauSCaicedo'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/twitter.svg"/></a>
 
 <h2> The end <br> ¡Thank you! <img src = "https://media.giphy.com/media/CEHtFH3rJ6xdhBUKIT/giphy.gif" width = 32px> </h2>
