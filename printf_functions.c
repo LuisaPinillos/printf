@@ -77,6 +77,7 @@ int intRecursive(int integer, int counter, int power10)
 	else
 	{
 		int longitud = 0;
+
 		power10 *= 10;
 		longitud = intRecursive(integer, ++counter, power10);
 		power10 /= 10;
